@@ -1,0 +1,20 @@
+[
+    {
+        "numero de cheque": "1223233",
+        "banco": "Santander",
+        "plazo": "30",
+        "estado": "pendiente"
+    },
+    {
+        "numero de cheque": "4445222",
+        "banco": "Bbva",
+        "plazo": "60",
+        "estado": "pendiente"
+    },
+    {
+        "numero de cheque": "3685789",
+        "banco": "Itau",
+        "plazo": "90",
+        "estado": "pagado"
+    }
+]

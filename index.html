@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
     <title>Mi Lista de Cheques</title>
 </head>
+
 <body>
     <header>
         <div class="cuadro">
@@ -29,19 +32,22 @@
                     <option value="pagado">Pagado</option>
                     <option value="vencido">Plazo vencido</option>
                 </select>
-                <button id="btn" type="submit">Acción</button>
+                <button id="btn" type="submit">Guardar</button>
             </form>
         </section>
         <section id="tasks" class="container">
             <h2>Listado de Cheques:</h2>
             <div id="todos">
-
+            
+                <!-- Los cheques se mostrarán aquí -->
             </div>
         </section>
     </main>
     <footer class="bg-dark">
         <p>Hecho por Lautaro Intraub</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.all.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
+
 </html>

@@ -16,8 +16,7 @@ function createTask(task) {
       <p>Plazo: ${task.deadline}</p>
     </div>
     <p class="${task.status.toLowerCase()}">${task.status}</p>
-    <button id="btn-${task_counter}" class="btn-delete" type="button">Eliminar</button>
-  `;
+    <button id="btn-${task_counter}" class="btn-delete" type="button">Eliminar</button>`;
 
     todos.appendChild(task_container);
 
@@ -25,10 +24,25 @@ function createTask(task) {
     deleteButton.addEventListener('click', (e) => {
         const id = e.target.id.split('-')[1];
         document.querySelector(`#task-${id}`).remove();
-    })
-};
+    });
+}
 
-
+function loadInitialTasks() {
+    fetch('/data/cheques.json')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(task => {
+                const formattedTask = {
+                    description: task["numero de cheque"],
+                    banco: task.banco,
+                    deadline: task.plazo,
+                    status: task.estado
+                };
+                createTask(formattedTask);
+            });
+        })
+        .catch(error => console.error('Error loading initial tasks:', error));
+}
 
 task_form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -43,4 +57,13 @@ task_form.addEventListener('submit', (e) => {
     createTask(task);
 
     task_form.reset();
+});
+
+window.addEventListener('load', loadInitialTasks);
+
+Swal.fire({
+  title: 'Atención',
+  text: 'Esta chequera es de uso personal e intransferible',
+  icon: 'info',
+  confirmButtonText: 'Aceptar'
 });
