@@ -6,9 +6,9 @@
     /* Paleta */
     --dark: #1e1f20;
     --light: #ffffff;
-    --primary: #FF3366;
+    --primary: #336dff;
     --accent: #00A6A6;
-    --pfooter: #FF3611;
+    --pfooter: #7811ff;
     /* Font Sizes */
     --text-title: 5.2em;
     --text-subtitle: 4.6em;
@@ -72,12 +72,12 @@ header h1 {
     font-size: var(--text-subtitle);
 }
 
-.cuadro{
-    padding: var(50px);
+.encabezado{
+    padding: var(40px);
     background-color: var(--primary);
     color: var(--dark);
     font-size: var(--text-caption);
-    font-weight: bold;
+    font-weight: lighter;
     border-style: dashed;
 }
 

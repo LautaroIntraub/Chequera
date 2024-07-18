@@ -41,7 +41,7 @@ function loadInitialTasks() {
                 createTask(formattedTask);
             });
         })
-        .catch(error => console.error('Error loading initial tasks:', error));
+        .catch(error => console.error('Error cargando los cheques iniciales:', error));
 }
 
 task_form.addEventListener('submit', (e) => {
